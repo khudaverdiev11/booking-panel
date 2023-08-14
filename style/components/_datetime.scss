@@ -1,0 +1,62 @@
+.dateContainer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  .flatpickr-calendar {
+    flex: 3;
+    margin-right: 10px;
+  }
+  .timeClockBox {
+    background-color: #fff;
+    flex: 5;
+    .timeClockHeader{
+        text-align: center;
+    }
+    .dayOfReserve{
+        color: #6c70dc;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .timeBoxes{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        .timeBoxItem{
+            background-color: #ECEFF2;
+            width: 96px;
+            height: 55px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .timeSelected{
+            background-color: #53D56C;
+            color: #fff;
+        }
+    }
+  }
+}
+.flatpickr-day {
+  border-radius: 0 !important;
+  margin: 2px !important;
+  .selected {
+    background-color: #6c70dc !important;
+  }
+}
+.flatpickr-disabled {
+  background-color: #f5f7fa !important;
+  color: #aaacaf !important;
+}
+.solid {
+    background-color: #e3eaf3;
+    height: 1px;
+    border: none;
+    margin-top: 10px;
+  }

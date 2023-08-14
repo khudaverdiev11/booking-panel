@@ -1,0 +1,40 @@
+.progressContent {
+  flex: 1;
+  box-sizing: border-box;
+  .progress {
+    height: 100%;
+    background-color: #292d32;
+    padding: 10px 20px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .step {
+      color: gray;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      .round {
+        width: 25px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: gray;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 10px;
+      }
+      .round.active {
+        background-color: #53d56c;
+      }
+    }
+    .step.active {
+      color: #53d56c;
+    }
+    .step.done {
+      color: #fff;
+    }
+  }
+}

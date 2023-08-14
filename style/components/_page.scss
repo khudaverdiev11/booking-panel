@@ -1,0 +1,179 @@
+#mainPage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .page {
+    flex: 3;
+    box-sizing: border-box;
+    background-color: #f5f7fa;
+    position: relative;
+
+    .pageHeader {
+      p {
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      .solid {
+        background-color: #e3eaf3;
+        height: 1px;
+        border: none;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #00000033;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .popupBox {
+      width: 500px;
+      height: 160px;
+      background-color: #fff;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      padding: 5px;
+      border-radius: 8px;
+      z-index: 10;
+
+      .popupHeader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+
+        .popupButton {
+          background-color: transparent;
+          color: #828f9a;
+        }
+      }
+
+      .popupContent {
+        width: 100%;
+        color: #f39c12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .elements {
+      padding: 20px;
+
+      .staffElement,
+      .serviceElement {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        position: relative;
+
+        .photo {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+
+        .info {
+          font-size: 15px;
+
+          .emailStaff,
+          .serviceDescription {
+            font-size: 13px;
+            color: #828f9a;
+          }
+        }
+
+        .infoService {
+          width: 85%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .priceDiv {
+            color: #4fbf65;
+            font-size: 25px;
+          }
+        }
+      }
+
+      .selected {
+        border: 2px solid #53d56c;
+      }
+    }
+
+    .actions {
+      width: 100%;
+      height: 76px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      padding: 0 20px;
+
+      button {
+        background-color: #6c70dc;
+        border: none;
+        color: #fff;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+      }
+
+      #confirmBtn {
+        width: 131px;
+      }
+
+      .validationBox {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 5px;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 3px;
+        background-color: #f4be6c;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

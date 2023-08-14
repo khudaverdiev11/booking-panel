@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./components/progress.scss";
+@import "./components/page.scss";
+@import "./components/datetime.scss";
+@import "./components/confirmation.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../assets/Rectangle.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Poppins, sans-serif;
+
+  .container {
+    width: 100%;
+    height: 760px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #mainSection {
+      width: 980px;
+      height: 560px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

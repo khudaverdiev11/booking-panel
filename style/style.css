@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.progressContent {
+  flex: 1;
+  box-sizing: border-box;
+}
+.progressContent .progress {
+  height: 100%;
+  background-color: #292d32;
+  padding: 10px 20px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.progressContent .progress .step {
+  color: gray;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.progressContent .progress .step .round {
+  width: 25px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: gray;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 10px;
+}
+.progressContent .progress .step .round.active {
+  background-color: #53d56c;
+}
+.progressContent .progress .step.active {
+  color: #53d56c;
+}
+.progressContent .progress .step.done {
+  color: #fff;
+}
+
+#mainPage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#mainPage .page {
+  flex: 3;
+  box-sizing: border-box;
+  background-color: #f5f7fa;
+  position: relative;
+}
+#mainPage .page .pageHeader p {
+  padding: 20px;
+  font-size: 18px;
+}
+#mainPage .page .pageHeader .solid {
+  background-color: #e3eaf3;
+  height: 1px;
+  border: none;
+}
+#mainPage .page .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+#mainPage .page #overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#mainPage .page .popupBox {
+  width: 500px;
+  height: 160px;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  padding: 5px;
+  border-radius: 8px;
+  z-index: 10;
+}
+#mainPage .page .popupBox .popupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+#mainPage .page .popupBox .popupHeader .popupButton {
+  background-color: transparent;
+  color: #828f9a;
+}
+#mainPage .page .popupBox .popupContent {
+  width: 100%;
+  color: #f39c12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainPage .page .elements {
+  padding: 20px;
+}
+#mainPage .page .elements .staffElement,
+#mainPage .page .elements .serviceElement {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+}
+#mainPage .page .elements .staffElement .photo,
+#mainPage .page .elements .serviceElement .photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#mainPage .page .elements .staffElement .photo img,
+#mainPage .page .elements .serviceElement .photo img {
+  border-radius: 50%;
+}
+#mainPage .page .elements .staffElement .info,
+#mainPage .page .elements .serviceElement .info {
+  font-size: 15px;
+}
+#mainPage .page .elements .staffElement .info .emailStaff,
+#mainPage .page .elements .staffElement .info .serviceDescription,
+#mainPage .page .elements .serviceElement .info .emailStaff,
+#mainPage .page .elements .serviceElement .info .serviceDescription {
+  font-size: 13px;
+  color: #828f9a;
+}
+#mainPage .page .elements .staffElement .infoService,
+#mainPage .page .elements .serviceElement .infoService {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mainPage .page .elements .staffElement .infoService .priceDiv,
+#mainPage .page .elements .serviceElement .infoService .priceDiv {
+  color: #4fbf65;
+  font-size: 25px;
+}
+#mainPage .page .elements .selected {
+  border: 2px solid #53d56c;
+}
+#mainPage .page .actions {
+  width: 100%;
+  height: 76px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px;
+}
+#mainPage .page .actions button {
+  background-color: #6c70dc;
+  border: none;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+#mainPage .page .actions #confirmBtn {
+  width: 131px;
+}
+#mainPage .page .actions .validationBox {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #f4be6c;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dateContainer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dateContainer .flatpickr-calendar {
+  flex: 3;
+  margin-right: 10px;
+}
+.dateContainer .timeClockBox {
+  background-color: #fff;
+  flex: 5;
+}
+.dateContainer .timeClockBox .timeClockHeader {
+  text-align: center;
+}
+.dateContainer .timeClockBox .dayOfReserve {
+  color: #6c70dc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.dateContainer .timeClockBox .timeBoxes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.dateContainer .timeClockBox .timeBoxes .timeBoxItem {
+  background-color: #ECEFF2;
+  width: 96px;
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.dateContainer .timeClockBox .timeBoxes .timeSelected {
+  background-color: #53D56C;
+  color: #fff;
+}
+
+.flatpickr-day {
+  border-radius: 0 !important;
+  margin: 2px !important;
+}
+.flatpickr-day .selected {
+  background-color: #6c70dc !important;
+}
+
+.flatpickr-disabled {
+  background-color: #f5f7fa !important;
+  color: #aaacaf !important;
+}
+
+.solid {
+  background-color: #e3eaf3;
+  height: 1px;
+  border: none;
+  margin-top: 10px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+  flex: 1;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#myForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formFields {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.noteFormGroup {
+  width: 100%;
+  background-color: #fff;
+  margin: 0px 20px;
+  border: 1px solid #E3EAF3;
+  border-radius: 4px;
+}
+.noteFormGroup .form-group {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+.noteFormGroup .form-group label {
+  padding-right: 10px;
+}
+.noteFormGroup .form-group input {
+  border: none;
+  background-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/Rectangle.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Poppins, sans-serif;
+}
+body .container {
+  width: 100%;
+  height: 760px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container #mainSection {
+  width: 980px;
+  height: 560px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=style.css.map */
